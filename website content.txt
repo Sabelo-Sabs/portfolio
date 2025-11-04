@@ -1,0 +1,172 @@
+=======Home section=======
+
+Hi, I am Sibabalwe
+
+Data Engineer
+
+I build and automate modern data pipelines for South African businesses — helping teams move from manual data processes to efficient, automated workflows.
+
+=======About section=======
+
+I'm Sibabalwe
+
+A Data Engineer based in Cape Town, South Africa
+
+I design and develop scalable data pipelines and automation solutions using Python, SQL, Apache Airflow, and AWS. My work focuses on improving data reliability, accuracy, and accessibility across cloud and on-premise environments. My passion is to simplify complex data systems through automation and thoughtful engineering. Check out my portfolio below.
+
+=======Skills section=======
+
+Education & Skills
+------------------
+
+For more than 3 years I’ve been designing, building, and maintaining modern ETL pipelines using Python, SQL, and cloud technologies like AWS.
+
+Education
+---------
+
+2019 - 2023  
+Advanced Diploma in Information Technology – Cape Peninsula University of Technology (CPUT), Cape Town  
+
+Certifications
+--------------
+
+2025  
+AWS Partner: Accreditation (Technical) – Amazon Web Services  
+Python Database Mastery: SQLAlchemy & Alembic – Udemy  
+
+2024  
+ChatGPT Prompt Engineering for Developers – DeepLearning.AI  
+
+2022  
+Data Analysis with Python: Zero to Pandas – Jovian  
+
+Technical Skills
+----------------
+
+Programming: Python, SQL  
+Frameworks & Tools: Apache Airflow, Flask  
+Cloud Platforms: AWS (S3, EC2, RDS)  
+Databases: MySQL, PostgreSQL, Vertica  
+Data Tools: Pandas, Microsoft Excel  
+Specialisations: ETL Processes, Data Pipeline Architecture, Workflow Automation  
+Version Control: Git / GitHub  
+Soft Skills: Problem-solving, Collaboration, Documentation, Remote Work Discipline  
+
+Work & Experience
+-----------------
+
+Junior Data Engineer  
+Full Time | Hybrid  
+February 2023 – Present  
+Eighty20 Consulting, Cape Town  
+
+• Designed and optimised 15+ ETL pipelines using AWS and SFTP, reducing processing time by 40%.  
+• Built and maintained 25+ Airflow DAGs, cutting downtime to under 2 hours per month.  
+• Automated SQL tasks in Excel through ODBC, saving ~20 hours of manual work weekly.  
+• Implemented data validation workflows that achieved near-perfect data accuracy.  
+• Collaborated on 3 major data projects across analytics and engineering teams.  
+• Authored technical documentation that halved onboarding time for new developers.  
+
+Junior Developer  
+Contract | Office  
+July 2022 – January 2023  
+Eighty20 Consulting, Cape Town  
+
+• Built ETL pipelines to process over 500MB of daily survey data into MySQL.  
+• Refactored R-based workflows into Python, cutting runtime by 25%.  
+• Improved processing efficiency by 35% using Pandas and SQL.  
+• Collaborated in a small team to deliver cleaner, more reliable data systems.  
+
+=======Services section=======
+
+1. Data Pipeline Development
+----------------------------
+
+Building scalable ETL and ELT pipelines that move data securely and efficiently between systems.
+
+What I provide
+- Custom pipeline design and automation
+- Database integration and data flow optimisation
+- Data quality checks and monitoring
+- Performance tuning for high-volume data
+
+2. Workflow Automation
+----------------------
+
+Automating manual data processes to improve accuracy and save time.
+
+What I provide
+- Apache Airflow DAG design and scheduling
+- Task orchestration and dependency handling
+- Automated validation and alert systems
+- Reduction of manual repetitive work
+
+3. Cloud Data Solutions
+-----------------------
+
+Designing and maintaining cloud-based data infrastructure.
+
+What I provide
+- AWS S3, EC2, and RDS setup
+- Data migration and storage optimisation
+- Backup and archiving strategies
+- Cost-efficient data access solutions
+
+4. Data Reporting & Analysis
+----------------------------
+
+Transforming raw data into meaningful business insights.
+
+What I provide
+- SQL query optimisation
+- Automated data exports and dashboards
+- Excel and BI report automation
+- End-to-end data delivery systems
+
+=======Portfolio section=======
+
+Selected Projects
+-----------------
+
+SFTP Data Export Pipeline  
+Built an automated and secure export pipeline, improving delivery speed for 5+ clients and eliminating manual file transfers.
+
+Airflow Log Management System  
+Created a pipeline to clean up and manage Airflow logs, reducing storage usage by 70% and improving performance.
+
+Database Archiving Solution  
+Implemented an in-database archiving system that improved query performance by 55% and lowered storage costs by 40%.
+
+S3 Data Migration Pipeline  
+Designed a workflow to move over 10TB of data to AWS S3, cutting costs and improving long-term data access.
+
+=======Our Client section=======
+
+1.  
+“Working with Sibabalwe was an amazing experience. His data automation work saved our team hours of manual effort every week.”  
+Aria Collins  
+Analytics Manager  
+
+2.  
+“This is outstanding work. Everything we needed was delivered efficiently with great attention to detail.”  
+Cillian Metcalfe  
+Data Analyst  
+
+3.  
+“Professional, responsive, and a pleasure to collaborate with — the new pipeline setup has transformed our reporting process.”  
+Kianna Baird  
+Technical Lead  
+
+=======Contact section=======
+
++27 72 211 7731  
+
+s.sibabalwee1@gmail.com  
+
+Cape Town, South Africa  
+
+I'm always open to discussing data projects, collaborations, or workflow automation solutions.
+
+=======Footer=======
+
+© 2025 by Siba Webspace. All rights reserved.
