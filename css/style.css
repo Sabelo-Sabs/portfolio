@@ -380,6 +380,9 @@ header.sticky .nav-bar {
   max-width: 100%;
   min-width: 500px;
   border-radius: 10px;
+  width: 625px;
+  height: 476px;
+  object-fit: cover;
 }
 
 .about-info .description {
@@ -433,6 +436,16 @@ header.sticky .nav-bar {
   font-size: var(--small-font-size);
 }
 
+.about-info .professional-list .list-item i {
+  font-size: 2rem;
+  color: var(--second-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-info .professional-list .list-item i:hover {
+  transform: scale(1.1);
+  color: var(--main-color);
+}
 /*=======Skills section=======*/
 .skills .container .content {
   width: 100%;
