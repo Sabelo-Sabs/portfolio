@@ -1,36 +1,42 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
+  <!-- Responsive viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complete Responsive Personal Portfolio Website - Html, Css & Javascript</title>
+  <title>Sibabalwe — Data Engineer Portfolio</title>
 
+  <!-- Styles & libs -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/scrollreveal" defer></script>
 </head>
 
 <body>
+  <!-- Skip link for accessibility -->
+  <a href="#home" class="visually-hidden">Skip to content</a>
 
   <!--=======Scroll to top button=======-->
-  <div class="scrollToTop-btn flex-centre">
-    <i class="fa-solid fa-arrow-up"></i>
+  <div class="scrollToTop-btn flex-centre" aria-hidden="true">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
   </div>
 
   <!--=======Light/Dark theme button=======-->
-  <div class="theme-btn flex-center">
-    <i class="fa-solid fa-moon"></i>
-    <i class="fa-solid fa-sun"></i>
+   <div class="theme-btn flex-center" aria-label="Toggle theme">
+    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+    <i class="fa-solid fa-sun" aria-hidden="true"></i>
   </div>
-
+  
   <!--=======Header=======-->
   <header>
     <div class="nav-bar">
-      <a href="#" class="logo">Sibabalwe</a>
-      <div class="navigation">
-        <div class="nav-items">
-          <div class="nav-close-btn"></div>
+      <a href="#home" class="logo">Sibabalwe</a>
+
+      <nav class="navigation" aria-label="Primary">
+        <div class="nav-items" id="primary-menu">
+          <button class="nav-close-btn" aria-label="Close menu"></button>
           <a class="active" href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
@@ -38,565 +44,539 @@
           <a href="#portfolio">Portfolio</a>
           <a href="#contact">Contact</a>
         </div>
-      </div>
-      <div class="nav-menu-btn"></div>
+      </nav>
+
+      <button class="nav-menu-btn" aria-label="Open menu"></button>
     </div>
   </header>
 
-  <!--=======Home section=======-->
-  <section class="home flex-centre" id="home">
-    <div class="home-container">
-      <div class="media-icons">
-        <a href="https://www.facebook.com/share/19MJHuJnRk/" target="_blank" rel="noopener noreferrer"
-          aria-label="Facebook" title="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://medium.com/@sibabalwesinyaniso" target="_blank" rel="noopener noreferrer" aria-label="Medium"
-          title="Medium">
-          <i class="fab fa-medium"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/sibabalwe-sinyaniso" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-      <div class="info">
-        <h2>Hi, I am Sibabalwe</h2>
-        <h3>Remote Data Engineer — Pretoria, South Africa</h3>
-        <p>I build scalable data pipelines and automation with Python, SQL, Airflow, and AWS—making data reliable and
-          accessible across cloud and on-prem.</p>
-        <a href="#contact" class="btn">Contact Me <i class="fa-solid fa-arrow-circle-right"></i></a>
-      </div>
-      <div class="home-img">
-        <img src="images/main-img.png" alt="Sibabalwe — Data Engineer">
-      </div>
-    </div>
-    <a href="#about" class="scroll-down"> Scroll Down <i class="fa-solid fa-arrow-down"></i></a>
-  </section>
-
-  <!--=======About section=======-->
-  <section class="about section" id="about">
-    <div class="container flex-centre">
-      <h1 class="section-title-01">About Me</h1>
-      <h2 class="section-title-02">About Me</h2>
-      <div class="content flex-centre">
-        <div class="about-img">
-          <img src="images/about-img.png" alt="">
+  <main>
+    <!--=======Home section=======-->
+    <section class="home flex-centre" id="home" aria-label="Home">
+      <div class="home-container">
+        <div class="media-icons">
+          <a href="https://www.facebook.com/share/19MJHuJnRk/" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a href="https://medium.com/@sibabalwesinyaniso" target="_blank" rel="noopener noreferrer"
+            aria-label="Medium">
+            <i class="fab fa-medium" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sibabalwe-sinyaniso" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </a>
         </div>
-        <div class="about-info">
-          <div class="description">
-            <h3>I'm Sibabalwe</h3>
-            <h4>A <span>Data Engineer</span> based in <span>Pretoria, South Africa</span></h4>
-            <p>I design and develop scalable data pipelines and automation solutions using Python, SQL, Apache Airflow,
-              and AWS. My work focuses on improving data reliability, accuracy, and accessibility across cloud and
-              on-premise environments. My passion is to simplify complex data systems through automation and thoughtful
-              engineering. Check out my portfolio below.</p>
-          </div>
-          <ul class="professional-list">
-            <li class="list-item">
-              <i class="fa-solid fa-briefcase"></i>
-              <h3>3+</h3>
-              <span>Years of<br>Experience</span>
-            </li>
-          </ul>
-          <a href="assets/sibabalwe_sinyaniso_updated_cv.pdf" class="btn" target="_blank" rel="noopener">Download CV <i
-              class="fa-solid fa-download"></i></a>
+
+        <div class="info">
+          <h1>Hi, I am Sibabalwe</h1>
+          <h3>Remote Data Engineer — Pretoria, South Africa</h3>
+          <p>I build scalable data pipelines and automation with Python, SQL, Airflow, and AWS—making data reliable and
+            accessible across cloud and on-prem.</p>
+          <a href="#contact" class="btn">Contact Me <i class="fa-solid fa-arrow-circle-right"
+              aria-hidden="true"></i></a>
+        </div>
+
+        <div class="home-img">
+          <img src="images/main-img.png" alt="Sibabalwe — Data Engineer portrait" loading="eager" decoding="async">
         </div>
       </div>
-    </div>
-  </section>
-  <!--=======Skills section=======-->
-  <section class="skills section" id="skills">
-    <div class="container flex-centre">
-      <h1 class="section-title-01">Skills</h1>
-      <h2 class="section-title-02">Skills</h2>
 
-      <div class="content">
-        <div class="skills-description">
-          <h3>Education &amp; Skills</h3>
-          <p>For more than 3 years I’ve been designing, building, and maintaining modern ETL pipelines using Python,
-            SQL, and cloud technologies like AWS.</p>
-        </div>
+      <a href="#about" class="scroll-down">Scroll Down <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+    </section>
 
-        <div class="skills-info education-all">
-          <!-- Education -->
-          <div class="education">
-            <h4><label>Education</label></h4>
-            <ul class="edu-list">
-              <li class="item">
-                <span class="year">2019 – 2023</span>
-                <p><span>Advanced Diploma in Information Technology</span> – Cape Peninsula University of Technology
-                  (CPUT), Cape Town</p>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Certifications -->
-          <div class="education">
-            <h4><label>Certifications</label></h4>
-            <ul class="edu-list">
-              <li class="item">
-                <span class="year">2025</span>
-                <p><span>AWS Partner: Accreditation (Technical)</span> – Amazon Web Services</p>
-              </li>
-              <li class="item">
-                <span class="year">2025</span>
-                <p><span>Python Database Mastery: SQLAlchemy &amp; Alembic</span> – Udemy</p>
-              </li>
-              <li class="item">
-                <span class="year">2024</span>
-                <p><span>ChatGPT Prompt Engineering for Developers</span> – DeepLearning.AI</p>
-              </li>
-              <li class="item">
-                <span class="year">2022</span>
-                <p><span>Data Analysis with Python: Zero to Pandas</span> – Jovian</p>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Technical Skills -->
-          <div class="education">
-            <h4><label>Technical Skills</label></h4>
-            <ul class="bars">
-              <li class="bar">
-                <div class="info"><span>Programming</span>–<span>Python, SQL</span></div>
-              </li>
-              <li class="bar">
-                <div class="info"><span>Frameworks</span>–<span>Apache Airflow, Flask</span></div>
-              </li>
-              <li class="bar">
-                <div class="info"><span>Cloud Platforms</span>–<span>AWS (S3, EC2, RDS)</span></div>
-              </li>
-              <li class="bar">
-                <div class="info"><span>Databases</span>–<span>MySQL, PostgreSQL, Vertica</span></div>
-              </li>
-              <li class="bar">
-                <div class="info"><span>Data Tools</span>–<span>Pandas, Microsoft Excel</span></div>
-              </li>
-              <li class="bar">
-                <div class="info"><span>Version Control</span>–<span>Git / GitHub</span></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="skills-description">
-          <h3>Work &amp; Experience</h3>
-        </div>
-
-        <div class="skills-info">
-          <!-- Experience 1 -->
-          <div class="experience-card">
-            <div class="upper">
-              <h3>Junior Data Engineer</h3>
-              <h5>Full Time | Hybrid</h5>
-              <span>February 2023 – Present</span>
-            </div>
-            <div class="hr"></div>
-            <h4><label>Eighty20 Consulting, Cape Town</label></h4>
-            <ul class="experience-list">
-              <li>• Designed and optimised 15+ ETL pipelines using AWS and SFTP, reducing processing time by 40%.</li>
-              <li>• Built and maintained 25+ Airflow DAGs, cutting downtime to under 2 hours per month.</li>
-              <li>• Automated SQL tasks in Excel via ODBC, saving ~20 hours weekly.</li>
-              <li>• Implemented data validation workflows achieving near-perfect data accuracy.</li>
-              <li>• Contributed to 3 major cross-team data projects.</li>
-              <li>• Authored documentation that halved onboarding time for new developers.</li>
-            </ul>
-          </div>
-
-          <!-- Experience 2 -->
-          <div class="experience-card">
-            <div class="upper">
-              <h3>Junior Developer</h3>
-              <h5>Contract | Office</h5>
-              <span>July 2022 – January 2023</span>
-            </div>
-            <div class="hr"></div>
-            <h4><label>Eighty20 Consulting, Cape Town</label></h4>
-            <ul class="experience-list">
-              <li>• Built ETL pipelines to process 500MB+ of daily survey data into MySQL.</li>
-              <li>• Refactored R-based workflows into Python, cutting runtime by 25%.</li>
-              <li>• Improved processing efficiency by 35% using Pandas and SQL.</li>
-              <li>• Collaborated in a small team to deliver reliable data systems.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--======= Services section =======-->
-  <section class="services section" id="services">
-    <div class="container flex-centre">
-      <h1 class="section-title-01">Services</h1>
-      <h2 class="section-title-02">Services</h2>
-
-      <div class="content">
-        <div class="services-description">
-          <h3>What I provide</h3>
-        </div>
-
-        <ul class="service-list">
-          <!-- 1. Data Pipeline Development -->
-          <li class="service-container">
-            <div class="service-card">
-              <i class="fa-solid fa-database"></i>
-              <h3>Data Pipeline Development</h3>
-              <div class="learn-more-btn">
-                Learn More <i class="fa-solid fa-long-arrow-alt-right"></i>
-              </div>
-            </div>
-            <div class="service-modal flex-centre">
-              <div class="service-modal-body">
-                <i class="fa-solid fa-times modal-close-btn"></i>
-                <h3>Data Pipeline Development</h3>
-                <h4>What is it?</h4>
-                <p>Building scalable ETL and ELT pipelines that move data securely and efficiently between systems.</p>
-                <h4>What I provide</h4>
-                <ul>
-                  <li><i class="fa-solid fa-check-circle"></i> Custom pipeline design and automation</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Database integration and data flow optimisation</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Data quality checks and monitoring</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Performance tuning for high-volume data</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <!-- 2. Workflow Automation -->
-          <li class="service-container">
-            <div class="service-card">
-              <i class="fa-solid fa-sitemap"></i>
-              <h3>Workflow Automation</h3>
-              <div class="learn-more-btn">
-                Learn More <i class="fa-solid fa-long-arrow-alt-right"></i>
-              </div>
-            </div>
-            <div class="service-modal flex-centre">
-              <div class="service-modal-body">
-                <i class="fa-solid fa-times modal-close-btn"></i>
-                <h3>Workflow Automation</h3>
-                <h4>What is it?</h4>
-                <p>Automating manual data processes to improve accuracy and save time.</p>
-                <h4>What I provide</h4>
-                <ul>
-                  <li><i class="fa-solid fa-check-circle"></i> Apache Airflow DAG design and scheduling</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Task orchestration and dependency handling</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Automated validation and alert systems</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Reduction of manual repetitive work</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <!-- 3. Cloud Data Solutions -->
-          <li class="service-container">
-            <div class="service-card">
-              <i class="fa-solid fa-cloud"></i>
-              <h3>Cloud Data Solutions</h3>
-              <div class="learn-more-btn">
-                Learn More <i class="fa-solid fa-long-arrow-alt-right"></i>
-              </div>
-            </div>
-            <div class="service-modal flex-centre">
-              <div class="service-modal-body">
-                <i class="fa-solid fa-times modal-close-btn"></i>
-                <h3>Cloud Data Solutions</h3>
-                <h4>What is it?</h4>
-                <p>Designing and maintaining cloud-based data infrastructure.</p>
-                <h4>What I provide</h4>
-                <ul>
-                  <li><i class="fa-solid fa-check-circle"></i> AWS S3, EC2, and RDS setup</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Data migration and storage optimisation</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Backup and archiving strategies</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Cost-efficient data access solutions</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <!-- 4. Medium Content Writing -->
-          <li class="service-container">
-            <div class="service-card">
-              <i class="fa-brands fa-medium"></i>
-              <h3>Medium Content Writing</h3>
-              <div class="learn-more-btn">
-                Learn More <i class="fa-solid fa-long-arrow-alt-right"></i>
-              </div>
-            </div>
-            <div class="service-modal flex-centre">
-              <div class="service-modal-body">
-                <i class="fa-solid fa-times modal-close-btn"></i>
-                <h3>Medium Content Writing</h3>
-                <h4>What is it?</h4>
-                <p>Writing engaging, insightful, and data-driven articles for Medium and other online audiences.</p>
-                <h4>What I provide</h4>
-                <ul>
-                  <li><i class="fa-solid fa-check-circle"></i> Data and tech-focused article writing</li>
-                  <li><i class="fa-solid fa-check-circle"></i> SEO-friendly storytelling and formatting</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Consistent publishing and topic research</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Collaboration on thought-leadership content</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <!--=======Portfolio section=======-->
-  <section class="portfolio section" id="portfolio">
-    <div class="container flex-centre">
-      <h1 class="section-title-01">Portfolio</h1>
-      <h2 class="section-title-02">Portfolio</h2>
-
-      <div class="content">
-        <div class="portfolio-list">
-
-          <!-- 1. Web Design (Portfolio Site) -->
-          <div class="img-card-container">
-            <div class="img-card">
-              <div class="overlay"></div>
-              <div class="info">
-                <h3>Web Design</h3>
-                <span>Personal portfolio</span>
-              </div>
-              <img src="images/port-webdesign.jpg" alt="Web design preview">
-            </div>
-            <div class="portfolio-model flex-centre">
-              <div class="portfolio-model-body">
-                <i class="fa-solid fa-times portfolio-close-btn"></i>
-                <h3>Web Design – Portfolio Website</h3>
-                <img src="images/port-webdesign.jpg" alt="Web design preview">
-                <p>
-                  Responsive single-page portfolio built with HTML, CSS, and JS (sections: Home, About, Skills, Services,
-                  Portfolio, Contact). Includes Font Awesome icons, scroll animations, and modular components for future projects.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2. Data Pipeline Development -->
-          <div class="img-card-container">
-            <div class="img-card">
-              <div class="overlay"></div>
-              <div class="info">
-                <h3>Data Pipeline</h3>
-                <span>ETL / ELT</span>
-              </div>
-              <img src="images/port-data-pipeline.jpg" alt="Data pipeline">
-            </div>
-            <div class="portfolio-model flex-centre">
-              <div class="portfolio-model-body">
-                <i class="fa-solid fa-times portfolio-close-btn"></i>
-                <h3>Data Pipeline Development</h3>
-                <img src="images/port-data-pipeline.jpg" alt="Data pipeline">
-                <p>
-                  Designed and optimised ETL/ELT pipelines moving data from SFTP/AWS into warehouse layers. Included
-                  data validation, archiving patterns, and performance tuning for high-volume datasets.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. Airflow DAG Orchestration -->
-          <div class="img-card-container">
-            <div class="img-card">
-              <div class="overlay"></div>
-              <div class="info">
-                <h3>Airflow Orchestration</h3>
-                <span>DAGs / Scheduling</span>
-              </div>
-              <img src="images/port-airflow.jpg" alt="Airflow DAGs">
-            </div>
-            <div class="portfolio-model flex-centre">
-              <div class="portfolio-model-body">
-                <i class="fa-solid fa-times portfolio-close-btn"></i>
-                <h3>Airflow DAG Orchestration</h3>
-                <img src="images/port-airflow.jpg" alt="Airflow DAGs">
-                <p>
-                  Built and maintained multiple Apache Airflow DAGs (campaign monitoring, OSAS/CMS feeds, remote logging).
-                  Included external task sensors, conditional triggers, and environment-aware variables.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. Cloud Data Solutions (AWS) -->
-          <div class="img-card-container">
-            <div class="img-card">
-              <div class="overlay"></div>
-              <div class="info">
-                <h3>Cloud Data Solutions</h3>
-                <span>AWS / S3 / EC2</span>
-              </div>
-              <img src="images/port-cloud.jpg" alt="Cloud data solutions">
-            </div>
-            <div class="portfolio-model flex-centre">
-              <div class="portfolio-model-body">
-                <i class="fa-solid fa-times portfolio-close-btn"></i>
-                <h3>Cloud Data Solutions</h3>
-                <img src="images/port-cloud.jpg" alt="Cloud data solutions">
-                <p>
-                  Provisioned and integrated AWS services (S3 access points, EC2, RDS) for data-engineering workloads.
-                  Focused on secure access, bucket structure, and cost-aware storage/archiving strategies.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5. Medium Content Writing -->
-          <div class="img-card-container">
-            <div class="img-card">
-              <div class="overlay"></div>
-              <div class="info">
-                <h3>Medium Writing</h3>
-                <span>Data / Engineering</span>
-              </div>
-              <img src="images/port-medium.jpg" alt="Medium content writing">
-            </div>
-            <div class="portfolio-model flex-centre">
-              <div class="portfolio-model-body">
-                <i class="fa-solid fa-times portfolio-close-btn"></i>
-                <h3>Medium Content Writing</h3>
-                <img src="images/port-medium.jpg" alt="Medium content writing">
-                <p>
-                  Long-form, technical-but-readable articles on data pipelines, Airflow tricks, and working with AWS
-                  in real client environments. Structured for SEO and developer audiences.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6. Branding & UI Assets -->
-          <div class="img-card-container">
-            <div class="img-card">
-              <div class="overlay"></div>
-              <div class="info">
-                <h3>Branding & UI</h3>
-                <span>Support assets</span>
-              </div>
-              <img src="images/port-branding.jpg" alt="Branding and UI">
-            </div>
-            <div class="portfolio-model flex-centre">
-              <div class="portfolio-model-body">
-                <i class="fa-solid fa-times portfolio-close-btn"></i>
-                <h3>Branding & UI Support</h3>
-                <img src="images/port-branding.jpg" alt="Branding and UI">
-                <p>
-                  Support visuals and UI layouts for dashboards, portfolio sections, and service pages to keep the whole
-                  site consistent with any personal brand.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--=======Get-in-touct=======-->
-    <div class="get-in-touch sub-section">
-      <div class="container">
-        <div class="content flex-centre">
-          <div class="contact-card flex-centre">
-            <div class="title">
-              <h4>Let's Talk</h4>
-              <h3>About Your</h3>
-              <h2>Next Project</h2>
-            </div>
-            <div class="contact-btn">
-              <a href="#contact" class="btn">Get In Touch <i class="fa-solid fa-paper-plane"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- =======Our Clients=======
-    <div class="our-client sub-section">
+    <!--=======About section=======-->
+    <section class="about section" id="about" aria-label="About">
       <div class="container flex-centre">
-        <h1 class="section-title-01">Our Clients</h1>
-        <h2 class="section-title-02">Our Clients</h2>
-        <div class="content">
-          <div class="swiper client-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide flex-centre">
-                <div class="client-img">
-                  <img src="images/client1.jpg" alt="">
-                </div>
-                <div class="client-details">
-                  <p>Hi, I'm Aria Collins and I am designer & developer who dream making the world better place by
-                    products. I am also very active for international clients.</p>
-                  <h3>Aria Collins</h3>
-                  <span>Graphic Designer</span>
-                </div>
-              </div>
-              <div class="swiper-slide flex-centre">
-                <div class="client-img">
-                  <img src="images/client2.jpg" alt="">
-                </div>
-                <div class="client-details">
-                  <p>These people really know what they are doing! Great customer support availability and supperb
-                    kindness. I am very happy that I've purchased this liscense!!!</p>
-                  <h3>Cillian Metcalfe</h3>
-                  <span>Graphic Designer</span>
-                </div>
-              </div>
-              <div class="swiper-slide flex-centre">
-                <div class="client-img">
-                  <img src="images/client3.jpg" alt="">
-                </div>
-                <div class="client-details">
-                  <p>These people really know what they are doing! Great customer support availability and supperb
-                    kindness. I am very happy that I've purchased this liscense!!!</p>
-                  <h3>Kianna Baird</h3>
-                  <span>App Developer</span>
-                </div>
-              </div>
+        <h1 class="section-title-01">About Me</h1>
+        <h2 class="section-title-02">About Me</h2>
+
+        <div class="content flex-centre">
+          <div class="about-img">
+            <img src="images/about-img.png" alt="Working at a laptop" loading="lazy" decoding="async">
+          </div>
+
+          <div class="about-info">
+            <div class="description">
+              <h3>I'm Sibabalwe</h3>
+              <h4>A <span>Data Engineer</span> based in <span>Pretoria, South Africa</span></h4>
+              <p>I design and develop scalable data pipelines and automation solutions using Python, SQL, Apache
+                Airflow,
+                and AWS. My work focuses on improving data reliability, accuracy, and accessibility across cloud and
+                on-premise environments. My passion is to simplify complex data systems through automation and
+                thoughtful
+                engineering. Check out my portfolio below.</p>
             </div>
-            <div class="swiper-button-next">
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <div class="swiper-button-prev">
-              <i class="fa-solid fa-chevron-left"></i>
-            </div>
-            <div class="swiper-pagination"></div>
+
+            <ul class="professional-list">
+              <li class="list-item">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <h3>3+</h3>
+                <span>Years of<br>Experience</span>
+              </li>
+            </ul>
+
+            <a href="assets/sibabalwe_sinyaniso_updated_cv.pdf" class="btn" target="_blank" rel="noopener">
+              Download CV <i class="fa-solid fa-download" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section> -->
-  <!--======= Contact section =======-->
-  <section class="contact section" id="contact">
-    <div class="container flex-centre">
-      <h1 class="section-title-01">Contact Me</h1>
-      <h2 class="section-title-02">Contact Me</h2>
-      <div class="content">
-        <div class="contact-left">
-          <h2>Let's discuss your project</h2>
-          <ul class="contact-list">
-            <li>
-              <h3 class="item-title"><i class="fa-solid fa-phone"></i> Phone</h3>
-              <span>+27 72 211 7731</span>
+    </section>
+
+    <!--=======Skills section=======-->
+    <section class="skills section" id="skills" aria-label="Skills">
+      <div class="container flex-centre">
+        <h1 class="section-title-01">Skills</h1>
+        <h2 class="section-title-02">Skills</h2>
+
+        <div class="content">
+          <div class="skills-description">
+            <h3>Education &amp; Skills</h3>
+            <p>For more than 3 years I’ve been designing, building, and maintaining modern ETL pipelines using Python,
+              SQL, and cloud technologies like AWS.</p>
+          </div>
+
+          <div class="skills-info education-all">
+            <!-- Education -->
+            <div class="education">
+              <h4><label>Education</label></h4>
+              <ul class="edu-list">
+                <li class="item">
+                  <span class="year">2019 – 2023</span>
+                  <p><span>Advanced Diploma in Information Technology</span> – Cape Peninsula University of Technology
+                    (CPUT), Cape Town</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Certifications -->
+            <div class="education">
+              <h4><label>Certifications</label></h4>
+              <ul class="edu-list">
+                <li class="item">
+                  <span class="year">2025</span>
+                  <p><span>AWS Partner: Accreditation (Technical)</span> – Amazon Web Services</p>
+                </li>
+                <li class="item">
+                  <span class="year">2025</span>
+                  <p><span>Python Database Mastery: SQLAlchemy &amp; Alembic</span> – Udemy</p>
+                </li>
+                <li class="item">
+                  <span class="year">2024</span>
+                  <p><span>ChatGPT Prompt Engineering for Developers</span> – DeepLearning.AI</p>
+                </li>
+                <li class="item">
+                  <span class="year">2022</span>
+                  <p><span>Data Analysis with Python: Zero to Pandas</span> – Jovian</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="education">
+              <h4><label>Technical Skills</label></h4>
+              <ul class="bars">
+                <li class="bar">
+                  <div class="info"><span>Programming</span>–<span>Python, SQL</span></div>
+                </li>
+                <li class="bar">
+                  <div class="info"><span>Frameworks</span>–<span>Apache Airflow, Flask</span></div>
+                </li>
+                <li class="bar">
+                  <div class="info"><span>Cloud Platforms</span>–<span>AWS (S3, EC2, RDS)</span></div>
+                </li>
+                <li class="bar">
+                  <div class="info"><span>Databases</span>–<span>MySQL, PostgreSQL, Vertica</span></div>
+                </li>
+                <li class="bar">
+                  <div class="info"><span>Data Tools</span>–<span>Pandas, Microsoft Excel</span></div>
+                </li>
+                <li class="bar">
+                  <div class="info"><span>Version Control</span>–<span>Git / GitHub</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skills-description">
+            <h3>Work &amp; Experience</h3>
+          </div>
+
+          <div class="skills-info">
+            <!-- Experience 1 -->
+            <div class="experience-card">
+              <div class="upper">
+                <h3>Junior Data Engineer</h3>
+                <h5>Full Time | Hybrid</h5>
+                <span>February 2023 – Present</span>
+              </div>
+              <div class="hr"></div>
+              <h4><label>Eighty20 Consulting, Cape Town</label></h4>
+              <ul class="experience-list">
+                <li>Designed and optimised 15+ ETL pipelines using AWS and SFTP, reducing processing time by 40%.</li>
+                <li>Built and maintained 25+ Airflow DAGs, cutting downtime to under 2 hours per month.</li>
+                <li>Automated SQL tasks in Excel via ODBC, saving ~20 hours weekly.</li>
+                <li>Implemented data validation workflows achieving near-perfect data accuracy.</li>
+                <li>Contributed to 3 major cross-team data projects.</li>
+                <li>Authored documentation that halved onboarding time for new developers.</li>
+              </ul>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="experience-card">
+              <div class="upper">
+                <h3>Junior Developer</h3>
+                <h5>Contract | Office</h5>
+                <span>July 2022 – January 2023</span>
+              </div>
+              <div class="hr"></div>
+              <h4><label>Eighty20 Consulting, Cape Town</label></h4>
+              <ul class="experience-list">
+                <li>Built ETL pipelines to process 500MB+ of daily survey data into MySQL.</li>
+                <li>Refactored R-based workflows into Python, cutting runtime by 25%.</li>
+                <li>Improved processing efficiency by 35% using Pandas and SQL.</li>
+                <li>Collaborated in a small team to deliver reliable data systems.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--======= Services section =======-->
+    <section class="services section" id="services" aria-label="Services">
+      <div class="container flex-centre">
+        <h1 class="section-title-01">Services</h1>
+        <h2 class="section-title-02">Services</h2>
+
+        <div class="content">
+          <div class="services-description">
+            <h3>What I provide</h3>
+          </div>
+
+          <ul class="service-list">
+            <!-- 1. Data Pipeline Development -->
+            <li class="service-container">
+              <div class="service-card">
+                <i class="fa-solid fa-database" aria-hidden="true"></i>
+                <h3>Data Pipeline Development</h3>
+                <div class="learn-more-btn">Learn More <i class="fa-solid fa-long-arrow-alt-right"
+                    aria-hidden="true"></i></div>
+              </div>
+              <div class="service-modal flex-centre" aria-hidden="true">
+                <div class="service-modal-body">
+                  <i class="fa-solid fa-times modal-close-btn" aria-label="Close"></i>
+                  <h3>Data Pipeline Development</h3>
+                  <h4>What is it?</h4>
+                  <p>Building scalable ETL and ELT pipelines that move data securely and efficiently between systems.
+                  </p>
+                  <h4>What I provide</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Custom pipeline design and
+                      automation</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Database integration and data flow
+                      optimisation</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Data quality checks and monitoring
+                    </li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Performance tuning for high-volume
+                      data</li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3 class="item-title"><i class="fa-solid fa-envelope"></i> Email Address</h3>
-              <span><a href="mailto:s.sibabalwee1@gmail.com">s.sibabalwee1@gmail.com</a></span>
+
+            <!-- 2. Workflow Automation -->
+            <li class="service-container">
+              <div class="service-card">
+                <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+                <h3>Workflow Automation</h3>
+                <div class="learn-more-btn">Learn More <i class="fa-solid fa-long-arrow-alt-right"
+                    aria-hidden="true"></i></div>
+              </div>
+              <div class="service-modal flex-centre" aria-hidden="true">
+                <div class="service-modal-body">
+                  <i class="fa-solid fa-times modal-close-btn" aria-label="Close"></i>
+                  <h3>Workflow Automation</h3>
+                  <h4>What is it?</h4>
+                  <p>Automating manual data processes to improve accuracy and save time.</p>
+                  <h4>What I provide</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Apache Airflow DAG design and
+                      scheduling</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Task orchestration and dependency
+                      handling</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Automated validation and alert
+                      systems</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Reduction of manual repetitive work
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3 class="item-title"><i class="fa-solid fa-location-dot"></i> Location</h3>
-              <span>Pretoria, South Africa</span>
+
+            <!-- 3. Cloud Data Solutions -->
+            <li class="service-container">
+              <div class="service-card">
+                <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+                <h3>Cloud Data Solutions</h3>
+                <div class="learn-more-btn">Learn More <i class="fa-solid fa-long-arrow-alt-right"
+                    aria-hidden="true"></i></div>
+              </div>
+              <div class="service-modal flex-centre" aria-hidden="true">
+                <div class="service-modal-body">
+                  <i class="fa-solid fa-times modal-close-btn" aria-label="Close"></i>
+                  <h3>Cloud Data Solutions</h3>
+                  <h4>What is it?</h4>
+                  <p>Designing and maintaining cloud-based data infrastructure.</p>
+                  <h4>What I provide</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> AWS S3, EC2, and RDS setup</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Data migration and storage
+                      optimisation</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Backup and archiving strategies</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Cost-efficient data access solutions
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <!-- 4. Medium Content Writing -->
+            <li class="service-container">
+              <div class="service-card">
+                <i class="fa-brands fa-medium" aria-hidden="true"></i>
+                <h3>Medium Content Writing</h3>
+                <div class="learn-more-btn">Learn More <i class="fa-solid fa-long-arrow-alt-right"
+                    aria-hidden="true"></i></div>
+              </div>
+              <div class="service-modal flex-centre" aria-hidden="true">
+                <div class="service-modal-body">
+                  <i class="fa-solid fa-times modal-close-btn" aria-label="Close"></i>
+                  <h3>Medium Content Writing</h3>
+                  <h4>What is it?</h4>
+                  <p>Writing engaging, insightful, and data-driven articles for Medium and other online audiences.</p>
+                  <h4>What I provide</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Data and tech-focused article
+                      writing</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> SEO-friendly storytelling and
+                      formatting</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Consistent publishing and topic
+                      research</li>
+                    <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Collaboration on thought-leadership
+                      content</li>
+                  </ul>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
-        <div class="contact-right">
-          <p>
-            I'm always open to discussing <br>
-            <span>data projects, workflow automation, collaborations, or creating websites.</span>
-          </p>
+      </div>
+    </section>
+
+    <!--=======Portfolio section=======-->
+    <section class="portfolio section" id="portfolio" aria-label="Portfolio">
+      <div class="container flex-centre">
+        <h1 class="section-title-01">Portfolio</h1>
+        <h2 class="section-title-02">Portfolio</h2>
+
+        <div class="content">
+          <div class="portfolio-list">
+            <!-- 1. Web Design (Portfolio Site) -->
+            <div class="img-card-container">
+              <div class="img-card">
+                <div class="overlay"></div>
+                <div class="info">
+                  <h3>Web Design</h3>
+                  <span>Personal portfolio</span>
+                </div>
+                <img src="images/port-webdesign.jpg" alt="Web design preview" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-model flex-centre" aria-hidden="true">
+                <div class="portfolio-model-body">
+                  <i class="fa-solid fa-times portfolio-close-btn" aria-label="Close"></i>
+                  <h3>Web Design – Portfolio Website</h3>
+                  <img src="images/port-webdesign.jpg" alt="Web design preview" loading="lazy" decoding="async">
+                  <p>Responsive single-page portfolio built with HTML, CSS, and JS (sections: Home, About, Skills,
+                    Services,
+                    Portfolio, Contact). Includes Font Awesome icons, scroll animations, and modular components for
+                    future projects.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Data Pipeline Development -->
+            <div class="img-card-container">
+              <div class="img-card">
+                <div class="overlay"></div>
+                <div class="info">
+                  <h3>Data Pipeline</h3>
+                  <span>ETL / ELT</span>
+                </div>
+                <img src="images/port-data-pipeline.jpg" alt="Data pipeline visual" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-model flex-centre" aria-hidden="true">
+                <div class="portfolio-model-body">
+                  <i class="fa-solid fa-times portfolio-close-btn" aria-label="Close"></i>
+                  <h3>Data Pipeline Development</h3>
+                  <img src="images/port-data-pipeline.jpg" alt="Data pipeline visual" loading="lazy" decoding="async">
+                  <p>Designed and optimised ETL/ELT pipelines moving data from SFTP/AWS into warehouse layers. Included
+                    data validation, archiving patterns, and performance tuning for high-volume datasets.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Airflow DAG Orchestration -->
+            <div class="img-card-container">
+              <div class="img-card">
+                <div class="overlay"></div>
+                <div class="info">
+                  <h3>Airflow Orchestration</h3>
+                  <span>DAGs / Scheduling</span>
+                </div>
+                <img src="images/port-airflow.jpg" alt="Apache Airflow DAGs" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-model flex-centre" aria-hidden="true">
+                <div class="portfolio-model-body">
+                  <i class="fa-solid fa-times portfolio-close-btn" aria-label="Close"></i>
+                  <h3>Airflow DAG Orchestration</h3>
+                  <img src="images/port-airflow.jpg" alt="Apache Airflow DAGs" loading="lazy" decoding="async">
+                  <p>Built and maintained multiple Apache Airflow DAGs (campaign monitoring, OSAS/CMS feeds, remote
+                    logging).
+                    Included external task sensors, conditional triggers, and environment-aware variables.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Cloud Data Solutions (AWS) -->
+            <div class="img-card-container">
+              <div class="img-card">
+                <div class="overlay"></div>
+                <div class="info">
+                  <h3>Cloud Data Solutions</h3>
+                  <span>AWS / S3 / EC2</span>
+                </div>
+                <img src="images/port-cloud.jpg" alt="Cloud data solutions illustration" loading="lazy"
+                  decoding="async">
+              </div>
+              <div class="portfolio-model flex-centre" aria-hidden="true">
+                <div class="portfolio-model-body">
+                  <i class="fa-solid fa-times portfolio-close-btn" aria-label="Close"></i>
+                  <h3>Cloud Data Solutions</h3>
+                  <img src="images/port-cloud.jpg" alt="Cloud data solutions illustration" loading="lazy"
+                    decoding="async">
+                  <p>Provisioned and integrated AWS services (S3 access points, EC2, RDS) for data-engineering
+                    workloads.
+                    Focused on secure access, bucket structure, and cost-aware storage/archiving strategies.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Medium Content Writing -->
+            <div class="img-card-container">
+              <div class="img-card">
+                <div class="overlay"></div>
+                <div class="info">
+                  <h3>Medium Writing</h3>
+                  <span>Data / Engineering</span>
+                </div>
+                <img src="images/port-medium.jpg" alt="Medium writing article preview" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-model flex-centre" aria-hidden="true">
+                <div class="portfolio-model-body">
+                  <i class="fa-solid fa-times portfolio-close-btn" aria-label="Close"></i>
+                  <h3>Medium Content Writing</h3>
+                  <img src="images/port-medium.jpg" alt="Medium writing article preview" loading="lazy"
+                    decoding="async">
+                  <p>Long-form, technical-but-readable articles on data pipelines, Airflow tricks, and working with AWS
+                    in real client environments. Structured for SEO and developer audiences.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Branding & UI Assets -->
+            <div class="img-card-container">
+              <div class="img-card">
+                <div class="overlay"></div>
+                <div class="info">
+                  <h3>Branding & UI</h3>
+                  <span>Support assets</span>
+                </div>
+                <img src="images/port-branding.jpg" alt="Branding and UI assets" loading="lazy" decoding="async">
+              </div>
+              <div class="portfolio-model flex-centre" aria-hidden="true">
+                <div class="portfolio-model-body">
+                  <i class="fa-solid fa-times portfolio-close-btn" aria-label="Close"></i>
+                  <h3>Branding & UI Support</h3>
+                  <img src="images/port-branding.jpg" alt="Branding and UI assets" loading="lazy" decoding="async">
+                  <p>Support visuals and UI layouts for dashboards, portfolio sections, and service pages to keep the
+                    whole
+                    site consistent with any personal brand.</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- /portfolio-list -->
+        </div> <!-- /content -->
+      </div> <!-- /container -->
+
+      <!--=======Get-in-touch=======-->
+      <div class="get-in-touch sub-section">
+        <div class="container">
+          <div class="content flex-centre">
+            <div class="contact-card flex-centre">
+              <div class="title">
+                <h4>Let's Talk</h4>
+                <h3>About Your</h3>
+                <h2>Next Project</h2>
+              </div>
+              <div class="contact-btn">
+                <a href="#contact" class="btn">Get In Touch <i class="fa-solid fa-paper-plane"
+                    aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <!-- /get-in-touch -->
+    </section>
 
+    <!--======= Contact section =======-->
+    <section class="contact section" id="contact" aria-label="Contact">
+      <div class="container flex-centre">
+        <h1 class="section-title-01">Contact Me</h1>
+        <h2 class="section-title-02">Contact Me</h2>
+
+        <div class="content">
+          <div class="contact-left">
+            <h2>Let's discuss your project</h2>
+            <ul class="contact-list">
+              <li>
+                <h3 class="item-title"><i class="fa-solid fa-phone" aria-hidden="true"></i> Phone</h3>
+                <span>+27 72 211 7731</span>
+              </li>
+              <li>
+                <h3 class="item-title"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email Address</h3>
+                <span><a href="mailto:s.sibabalwee1@gmail.com">s.sibabalwee1@gmail.com</a></span>
+              </li>
+              <li>
+                <h3 class="item-title"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Location</h3>
+                <span>Pretoria, South Africa</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-right">
+            <p>
+              I'm always open to discussing <br>
+              <span>data projects, workflow automation, collaborations, or creating websites.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!--=======Footer=======-->
   <footer>
@@ -607,7 +587,7 @@
         <a href="#about">About Me</a>
       </div>
 
-      <div class="hr"></div>
+      <div class="hr" aria-hidden="true"></div>
 
       <div class="info group">
         <h3>More</h3>
@@ -619,14 +599,17 @@
         </ul>
       </div>
 
-      <div class="hr"></div>
+      <div class="hr" aria-hidden="true"></div>
 
       <div class="follow group">
         <h3>Follow</h3>
         <ul>
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/share/19MJHuJnRk/" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://medium.com/@sibabalwesinyaniso" target="_blank" rel="noopener noreferrer"
+              aria-label="Medium"><i class="fab fa-medium"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/sibabalwe-sinyaniso" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
         </ul>
       </div>
     </div>
@@ -639,7 +622,6 @@
   <!--=======External scripts=======-->
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 
 </html>

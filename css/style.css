@@ -83,6 +83,18 @@ li {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /*=======Scroll to top button=======*/
 .scrollToTop-btn {
   z-index: 99999;
@@ -247,6 +259,7 @@ header.sticky .nav-bar {
   color: var(--hover-color);
 }
 
+.home-container .info h1,
 .home-container .info h2 {
   font-size: 4em;
   font-weight: 600;
@@ -446,7 +459,7 @@ header.sticky .nav-bar {
 
 .about-info .professional-list .list-item i:hover {
   transform: scale(1.1);
-  color: var(--main-color);
+  color: var(--second-color);
 }
 
 /*=======Skills section=======*/
@@ -887,7 +900,7 @@ header.sticky .nav-bar {
   object-position: center;
 }
 
-/*=======Get-in-touct=======*/
+/*=======Get-in-touch=======*/
 .get-in-touch {
   margin-top: 70px;
 }
@@ -931,75 +944,6 @@ header.sticky .nav-bar {
   opacity: 0.9;
 }
 
-/*=======Our Clients=======*/
-/* .our-client .container {
-  flex-direction: column;
-}
-
-.our-client .container .content {
-  width: 100%;
-}
-
-.client-swiper .swiper-wrapper {
-  margin-bottom: 30px;
-}
-
-.client-swiper .swiper-slide {
-  gap: 50px;
-  margin: 20px 0;
-}
-
-.client-img {
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.client-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.client-details {
-  max-width: 500px;
-}
-
-.client-details p {
-  font-size: 1.2em;
-  color: var(--third-color);
-  padding-bottom: 15px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid var(--line-color);
-}
-
-.client-details h3 {
-  color: var(--first-color);
-  font-size: 1.5em;
-}
-
-.client-details span {
-  color: var(--third-color);
-  font-size: 1.1em;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  content: "";
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--second-color);
-  font-size: 3em;
-}
-
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active {
-  background: var(--second-color);
-} */
-
 /*=======Contact section=======*/
 .contact .container .content {
   display: flex;
@@ -1029,7 +973,6 @@ header.sticky .nav-bar {
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--first-color);
-  /* ensure title color */
 }
 
 /* Icons and title color inside contact list */
@@ -1106,14 +1049,6 @@ header.sticky .nav-bar {
   border-radius: 5px;
   cursor: pointer;
 }
-
-@media (max-width: 768px) {
-  .contact .container .content {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-
 
 /*=======Footer=======*/
 footer {
@@ -1302,15 +1237,6 @@ footer a {
     line-height: 50px;
   }
 
-  /*=======Our clients=======*/
-  .client-swiper .swiper-slide {
-    flex-direction: column;
-  }
-
-  .client-details {
-    text-align: center;
-  }
-
   /*=======Contact section=======*/
   .contact .content {
     flex-direction: column;
@@ -1418,8 +1344,12 @@ footer a {
 
 /* ====== Minimal responsive tweaks (append) ====== */
 @media (max-width: 1024px) {
+
   /* Slightly tighter padding + saner grids on tablets */
-  .section { padding: 5rem 1.5rem 2rem; }
+  .section {
+    padding: 5rem 1.5rem 2rem;
+  }
+
   .skills-info,
   .service-list,
   .portfolio-list {
@@ -1432,11 +1362,29 @@ footer a {
   /* Single-column stacks on phones, comfortable card height */
   .skills-info,
   .service-list,
-  .portfolio-list { grid-template-columns: 1fr; }
+  .portfolio-list {
+    grid-template-columns: 1fr;
+  }
 
-  .portfolio-list .img-card { height: 260px; }
+  .portfolio-list .img-card {
+    height: 260px;
+  }
 
   /* Headings scale down a touch so they don’t crowd */
-  .section-title-01 { font-size: 3.2em; }
-  .section-title-02 { font-size: 1.8em; transform: translateY(-50px); }
+  .section-title-01 {
+    font-size: 3.2em;
+  }
+
+  .section-title-02 {
+    font-size: 1.8em;
+    transform: translateY(-50px);
+  }
+}
+
+/* Contact vertical stack breakpoint already defined above at 768px */
+@media (max-width: 768px) {
+  .contact .container .content {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
