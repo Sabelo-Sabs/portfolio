@@ -255,8 +255,8 @@ header.sticky .nav-bar {
 
 .home-container .info h3 {
   color: var(--third-color);
-  font-feature-settings: 1.3em;
-  font-weight: 50px;
+  font-size: 1.3em;
+  font-weight: 500;
 }
 
 .home-container .info p {
@@ -1412,4 +1412,31 @@ footer a {
   .contact-card .contact-btn .btn {
     font-size: 0.8rem;
   }
+}
+
+
+
+/* ====== Minimal responsive tweaks (append) ====== */
+@media (max-width: 1024px) {
+  /* Slightly tighter padding + saner grids on tablets */
+  .section { padding: 5rem 1.5rem 2rem; }
+  .skills-info,
+  .service-list,
+  .portfolio-list {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Single-column stacks on phones, comfortable card height */
+  .skills-info,
+  .service-list,
+  .portfolio-list { grid-template-columns: 1fr; }
+
+  .portfolio-list .img-card { height: 260px; }
+
+  /* Headings scale down a touch so they don’t crowd */
+  .section-title-01 { font-size: 3.2em; }
+  .section-title-02 { font-size: 1.8em; transform: translateY(-50px); }
 }
