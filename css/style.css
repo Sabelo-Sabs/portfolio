@@ -638,6 +638,17 @@ header.sticky .nav-bar {
   display: none;
 }
 
+.experience-card ul {
+  list-style: disc !important;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.experience-card li {
+  display: list-item;
+  margin-bottom: 8px;
+}
+
 /*=======Services section=======*/
 .services .container .content {
   width: 100%;
