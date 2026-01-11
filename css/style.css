@@ -294,7 +294,7 @@ header.sticky .nav-bar {
   background: var(--hover-color);
 }
 
-/* ===== UPDATED: pixel-perfect but responsive hero image ===== */
+/* ===== UPDATED: pixel-perfect but responsive hero image (desktop/tablet) ===== */
 .home-container .home-img {
   position: relative;
   width: min(960px, 100%);
@@ -1311,20 +1311,26 @@ footer a {
     transform: translateY(-65px);
   }
 
-  /*=======Home section=======*/
+  /*=======Home section (UPDATED: text left + image right)=======*/
   .home .home-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .home .home-container .info {
+    width: 60%;
+    font-size: 0.8rem;
   }
 
   .home-container .home-img {
-    position: relative;         /* key: stop overlay */
-    width: min(420px, 100%);    /* sensible mobile width */
+    position: relative;      /* remove overlay */
+    width: 40%;
+    max-width: 280px;
     height: auto;
     aspect-ratio: 960 / 842;
-    align-self: center;         /* keep it centered */
+    flex-shrink: 0;
   }
 
   .home-container .home-img img {
@@ -1332,10 +1338,6 @@ footer a {
     height: 100%;
     object-fit: cover;
     transform: none;
-  }
-
-  .home .home-container .info {
-    font-size: 0.8rem;
   }
 
   .media-icons {
@@ -1354,6 +1356,25 @@ footer a {
 
   .contact-card .contact-btn .btn {
     font-size: 0.8rem;
+  }
+}
+
+/* Extra-small phones: stack to avoid cramping */
+@media (max-width: 480px) {
+  .home .home-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .home .home-container .info {
+    width: 100%;
+  }
+
+  .home-container .home-img {
+    width: 100%;
+    max-width: 360px;
+    align-self: center;
   }
 }
 
