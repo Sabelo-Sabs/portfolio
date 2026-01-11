@@ -1311,26 +1311,30 @@ footer a {
     transform: translateY(-65px);
   }
 
-  /*=======Home section (UPDATED: text left + image right)=======*/
+  /*=======Home section (UPDATED: icons left + image right, text below)=======*/
   .home .home-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    column-gap: 16px;
+    row-gap: 24px;
+    align-items: start;
   }
 
-  .home .home-container .info {
-    width: 60%;
-    font-size: 0.8rem;
+  .home-container .media-icons {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin-right: 0;
   }
 
   .home-container .home-img {
-    position: relative;      /* remove overlay */
-    width: 40%;
-    max-width: 280px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    position: relative;
+    width: min(220px, 60vw);
+    max-width: 220px;
     height: auto;
     aspect-ratio: 960 / 842;
-    flex-shrink: 0;
   }
 
   .home-container .home-img img {
@@ -1338,6 +1342,13 @@ footer a {
     height: 100%;
     object-fit: cover;
     transform: none;
+  }
+
+  .home .home-container .info {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    font-size: 0.8rem;
   }
 
   .media-icons {
@@ -1359,26 +1370,17 @@ footer a {
   }
 }
 
-/* Extra-small phones: stack to avoid cramping */
+/* Very small phones: keep layout, just shrink the image */
 @media (max-width: 480px) {
   .home .home-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-
-  .home .home-container .info {
-    width: 100%;
+    grid-template-columns: 52px 1fr;
   }
 
   .home-container .home-img {
-    width: 100%;
-    max-width: 360px;
-    align-self: center;
+    width: min(180px, 58vw);
+    max-width: 180px;
   }
 }
-
-
 
 /* ====== Minimal responsive tweaks (append) ====== */
 @media (max-width: 1024px) {
@@ -1397,6 +1399,7 @@ footer a {
 }
 
 @media (max-width: 600px) {
+
   /* Single-column stacks on phones, comfortable card height */
   .skills-info,
   .service-list,
