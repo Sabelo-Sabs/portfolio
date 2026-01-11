@@ -1329,13 +1329,14 @@ footer a {
   .home-container .home-img {
     grid-column: 2;
     grid-row: 1;
-    justify-self: end;
+    justify-self: start;          /* stop pushing it far right */
     position: relative;
-    width: min(220px, 60vw);
-    max-width: 220px;
+    width: 100%;                  /* use the full content column */
+    max-width: 360px;             /* sensible mobile cap */
     height: auto;
     aspect-ratio: 960 / 842;
   }
+
 
   .home-container .home-img img {
     width: 100%;
