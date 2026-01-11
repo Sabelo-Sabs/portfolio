@@ -294,13 +294,19 @@ header.sticky .nav-bar {
   background: var(--hover-color);
 }
 
+/* ===== UPDATED: pixel-perfect but responsive hero image ===== */
 .home-container .home-img {
   position: relative;
+  width: min(960px, 100%);
+  height: auto;
+  aspect-ratio: 960 / 842;
 }
 
 .home-container .home-img img {
-  width: 90%;
-  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
 }
 
 .home .scroll-down {
@@ -1312,11 +1318,16 @@ footer a {
 
   .home-container .home-img {
     position: absolute;
+    width: min(960px, 100%);
+    height: auto;
+    aspect-ratio: 960 / 842;
   }
 
   .home-container .home-img img {
-    width: 65%;
-    transform: translate(80px, -180px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
   }
 
   .home .home-container .info {
