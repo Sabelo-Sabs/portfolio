@@ -1346,11 +1346,11 @@ footer a {
   }
 
   .home .home-container .info {
-    grid-column: 2;
-    grid-row: 2;
-    width: 100%;
-    font-size: 0.8rem;
-  }
+  grid-column: 1 / -1;  /* span under icons + image */
+  grid-row: 2;
+  width: 100%;
+  font-size: 0.8rem;
+}
 
   .media-icons {
     margin-bottom: 80px;
