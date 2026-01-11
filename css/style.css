@@ -1313,14 +1313,18 @@ footer a {
 
   /*=======Home section=======*/
   .home .home-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
   }
 
   .home-container .home-img {
-    position: absolute;
-    width: min(960px, 100%);
+    position: relative;         /* key: stop overlay */
+    width: min(420px, 100%);    /* sensible mobile width */
     height: auto;
     aspect-ratio: 960 / 842;
+    align-self: center;         /* keep it centered */
   }
 
   .home-container .home-img img {
