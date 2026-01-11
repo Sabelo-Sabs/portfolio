@@ -1329,13 +1329,15 @@ footer a {
   .home-container .home-img {
     grid-column: 2;
     grid-row: 1;
-    justify-self: start;          /* stop pushing it far right */
+    justify-self: start;
     position: relative;
-    width: 100%;                  /* use the full content column */
-    max-width: 360px;             /* sensible mobile cap */
+    width: 100%;
+    max-width: 620px;   /* ⬅ bigger, hero-level size */
+    /* allow proper visual size */
     height: auto;
     aspect-ratio: 960 / 842;
   }
+
 
 
   .home-container .home-img img {
@@ -1346,11 +1348,12 @@ footer a {
   }
 
   .home .home-container .info {
-  grid-column: 1 / -1;  /* span under icons + image */
-  grid-row: 2;
-  width: 100%;
-  font-size: 0.8rem;
-}
+    grid-column: 1 / -1;
+    /* span under icons + image */
+    grid-row: 2;
+    width: 100%;
+    font-size: 0.8rem;
+  }
 
   .media-icons {
     margin-bottom: 80px;
